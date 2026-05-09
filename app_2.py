@@ -26,15 +26,15 @@ tab1, tab2, tab3 = st.tabs(["📝 Registro de Ventas", "🔍 Buscador Inteligent
 
 # --- TAB 1: FORMULARIO CON VALIDACIÓN ---
 with tab1:
-    st.header("Añadir Nueva Venta")
+    st.header("Añadir Nueva Venta ")
     with st.form("registro_form", clear_on_submit=True):
         col1, col2 = st.columns(2)
         with col1:
-            prod = st.text_input("Nombre del Producto")
+            prod = st.text_input("Ingres el Nombre del Producto")
             cant = st.number_input("Cantidad", min_value=1, step=1)
         with col2:
-            prec = st.number_input("Precio Unitario", min_value=0.0, step=0.1)
-            tel = st.text_input("Teléfono del Cliente (10 dígitos)")
+            prec = st.number_input("Ingresa el Precio Unitario", min_value=0.0, step=0.1)
+            tel = st.text_input("Teléfono del Cliente (10 dígitos exactos)")
         
         submit = st.form_submit_button("Registrar Venta")
 
